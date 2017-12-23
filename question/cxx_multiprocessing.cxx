@@ -8,13 +8,11 @@ int main (int argc, char * argv[]) {
 	std::string text;
 	while (text != "exit") {
 		std::cout << "-> command ~$ "; std::cin >> text;
-		if (text == "list") {
-			if (text == "start") {
-				/* ??? */
-			}
-			else if (text == "stop") {
-				/* ??? */
-			}
+		if (text == "start") {
+			/* ??? */
+		}
+		else if (text == "stop") {
+			/* ??? */
 		}
 	}
 	return 0;
