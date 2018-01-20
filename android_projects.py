@@ -121,7 +121,7 @@ class Window:
     def btn_click(self, widget):
 		dialog = gtk.FileChooserDialog("Open..", None, gtk.FILE_CHOOSER_ACTION_SELECT_FOLDER, 
 			(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL, gtk.STOCK_OPEN, gtk.RESPONSE_OK));
-		dialog.set_current_folder(os.environ['HOME'] + "/AndroidStudioProjects");
+		dialog.set_current_folder(self.PathSDK.get_text());
 		
 		if dialog.run() == gtk.RESPONSE_OK:
 			path = str(dialog.get_filename()) + "/" + self.AppName.get_text();
