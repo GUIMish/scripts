@@ -69,7 +69,7 @@ class Window:
 		self.label = gtk.Label("Path SDK: "); 	self.alignment1.add(self.label);
 		self.alignment2 = gtk.Alignment(0, 0); 	self.hbox8.pack_start(self.alignment2, 0, 1);
 		self.PathSDK = gtk.Entry(); 			self.alignment2.add(self.PathSDK);
-		self.PathSDK.set_text(os.environ['HOME']);
+		self.PathSDK.set_text(os.environ['HOME'] + "/Android/Sdk");
 		
 		
 		self.btn_create = gtk.Button("Create"); self.main_box.pack_end(self.btn_create, 0, 1, 5);
@@ -121,7 +121,7 @@ class Window:
     def btn_click(self, widget):
 		dialog = gtk.FileChooserDialog("Open..", None, gtk.FILE_CHOOSER_ACTION_SELECT_FOLDER, 
 			(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL, gtk.STOCK_OPEN, gtk.RESPONSE_OK));
-		dialog.set_current_folder(self.PathSDK.get_text());
+		dialog.set_current_folder(os.environ['HOME']);
 		
 		if dialog.run() == gtk.RESPONSE_OK:
 			path = str(dialog.get_filename()) + "/" + self.AppName.get_text();
