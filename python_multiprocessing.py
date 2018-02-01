@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+#  Copyright: 2017 GUIMish <mish7913@gmail.com>
+#  License:   GNU General Public License v2 or later
+
 import os, time;
 from multiprocessing import Process
 
